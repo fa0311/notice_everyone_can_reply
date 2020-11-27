@@ -1,0 +1,21 @@
+{
+    "name": "notice_everyone_can_reply",
+    "description": "クソリプ防止機能を忘れる人向けの拡張機能です",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_popup": "html/popup.html"
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://twitter.com/*"
+        ],
+        "js": [
+            "js/lib/jquery-3.5.1.min.js",
+            "js/main.js"
+        ],
+        "css": [
+            "css/main.css"
+        ]
+    }]
+}
